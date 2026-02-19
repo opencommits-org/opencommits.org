@@ -129,7 +129,7 @@ export default function Home() {
           <RegexBlock
             label={t('validation.defaultLabel')}
             plain="^(Add|Fix|Ref|Opt|Rmv|Doc|Tst|Sty|Chr|Mov|Rnm|Dep|Sec|Cfg|Rev)(!)?( [a-z][a-z0-9]*){0,2} [a-z].+$"
-            regex={`<span style="color:#00b8ff">^</span><span style="color:#00e5a0">(Add|Fix|Ref|Opt|Rmv|Doc|Tst|Sty|Chr|Mov|Rnm|Dep|Sec|Cfg|Rev)</span><span style="color:#00e5a0">(!)?</span><span style="color:#00e5a0">( [a-z][a-z0-9]*)</span><span style="color:#febc2e">{0,2}</span> <span style="color:#00e5a0">[a-z].+</span><span style="color:#00b8ff">$</span>`}
+            regex={`<span style="color:var(--blue)">^</span><span style="color:var(--accent)">(Add|Fix|Ref|Opt|Rmv|Doc|Tst|Sty|Chr|Mov|Rnm|Dep|Sec|Cfg|Rev)</span><span style="color:var(--accent)">(!)?</span><span style="color:var(--accent)">( [a-z][a-z0-9]*)</span><span style="color:var(--yellow)">{0,2}</span> <span style="color:var(--accent)">[a-z].+</span><span style="color:var(--blue)">$</span>`}
           />
         </Reveal>
         <div className={s.regexGap} />
@@ -137,7 +137,7 @@ export default function Home() {
           <RegexBlock
             label={t('validation.strictLabel')}
             plain="^(Add|Fix|Ref|Opt|Rmv|Doc|Tst|Sty|Chr|Mov|Rnm|Dep|Sec|Cfg|Rev)(!)?( [a-z][a-z0-9]*)? [a-z].+$"
-            regex={`<span style="color:#00b8ff">^</span><span style="color:#00e5a0">(Add|Fix|Ref|Opt|Rmv|Doc|Tst|Sty|Chr|Mov|Rnm|Dep|Sec|Cfg|Rev)</span><span style="color:#00e5a0">(!)?</span><span style="color:#00e5a0">( [a-z][a-z0-9]*)</span><span style="color:#febc2e">?</span> <span style="color:#00e5a0">[a-z].+</span><span style="color:#00b8ff">$</span>`}
+            regex={`<span style="color:var(--blue)">^</span><span style="color:var(--accent)">(Add|Fix|Ref|Opt|Rmv|Doc|Tst|Sty|Chr|Mov|Rnm|Dep|Sec|Cfg|Rev)</span><span style="color:var(--accent)">(!)?</span><span style="color:var(--accent)">( [a-z][a-z0-9]*)</span><span style="color:var(--yellow)">?</span> <span style="color:var(--accent)">[a-z].+</span><span style="color:var(--blue)">$</span>`}
           />
         </Reveal>
       </section>

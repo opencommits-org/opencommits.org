@@ -38,8 +38,8 @@
 }
 
 .copyBtnCopied {
-  color: var(--accent);
-  border-color: rgba(0,229,160,0.3);
+  color: var(--green-3);
+  border-color: var(--green-2);
 }
 
 .body {

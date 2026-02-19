@@ -66,17 +66,17 @@
   font-family: var(--mono);
   font-size: 15px;
   font-weight: 500;
-  color: var(--accent);
-  background: var(--accent-dim);
-  border: 1px solid rgba(0,229,160,0.2);
+  color: var(--green-4);
+  background: var(--green-1);
+  border: 1px solid var(--green-2);
   padding: 4px 10px;
   border-radius: 5px;
 }
 
 .typeTagExtended {
   color: var(--blue);
-  background: rgba(0,184,255,0.08);
-  border-color: rgba(0,184,255,0.2);
+  background: rgba(9,105,218,0.08);
+  border-color: rgba(9,105,218,0.25);
 }
 
 .semverBadge {
@@ -88,10 +88,10 @@
   border-radius: 3px;
 }
 
-.semverMajor { background: rgba(255,95,87,0.12); color: #ff5f57; border: 1px solid rgba(255,95,87,0.2); }
-.semverMinor { background: rgba(254,188,46,0.1); color: #febc2e; border: 1px solid rgba(254,188,46,0.2); }
-.semverPatch { background: rgba(40,200,64,0.1); color: #28c840; border: 1px solid rgba(40,200,64,0.2); }
-.semverNone  { background: rgba(255,255,255,0.04); color: var(--text-dim); border: 1px solid var(--border); }
+.semverMajor { background: rgba(207,34,46,0.1); color: var(--red); border: 1px solid rgba(207,34,46,0.3); }
+.semverMinor { background: rgba(154,103,0,0.1); color: var(--yellow); border: 1px solid rgba(154,103,0,0.3); }
+.semverPatch { background: var(--green-1); color: var(--green-4); border: 1px solid var(--green-2); }
+.semverNone  { background: var(--bg3); color: var(--text-dim); border: 1px solid var(--border); }
 
 .typeName {
   font-size: 15px;
@@ -111,11 +111,27 @@
   font-family: var(--mono);
   font-size: 12px;
   color: var(--text-dim);
-  background: rgba(255,255,255,0.03);
+  background: var(--bg2);
   border: 1px solid var(--border);
   padding: 6px 10px;
   border-radius: 4px;
 }
 
-.exAccent { color: var(--accent); font-weight: 500; }
+.exAccent { color: var(--green-4); font-weight: 500; }
 .exBlue { color: var(--blue); font-weight: 500; }
+
+/* Dark mode overrides */
+:global([data-theme="dark"]) .typeTagExtended {
+  background: rgba(88,166,255,0.12);
+  border-color: rgba(88,166,255,0.3);
+}
+
+:global([data-theme="dark"]) .semverMajor {
+  background: rgba(248,81,73,0.15);
+  border-color: rgba(248,81,73,0.3);
+}
+
+:global([data-theme="dark"]) .semverMinor {
+  background: rgba(210,153,34,0.15);
+  border-color: rgba(210,153,34,0.3);
+}

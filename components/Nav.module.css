@@ -14,7 +14,7 @@
 
 .navScrolled {
   border-color: var(--border);
-  background: rgba(8,10,14,0.8);
+  background: var(--nav-bg);
   backdrop-filter: blur(20px);
 }
 
@@ -52,8 +52,9 @@
 .cta {
   font-family: var(--mono);
   font-size: 13px;
-  color: var(--accent);
-  border: 1px solid rgba(0,229,160,0.3);
+  color: var(--green-4);
+  border: 1px solid var(--green-2);
+  background: var(--green-1);
   padding: 8px 16px;
   border-radius: 4px;
   text-decoration: none;
@@ -61,7 +62,12 @@
 }
 
 .cta:hover {
-  background: var(--accent-dim);
-  border-color: rgba(0,229,160,0.6);
-  color: var(--accent);
+  background: var(--green-2);
+  border-color: var(--green-3);
+  color: var(--green-4);
+}
+
+/* Dark mode overrides */
+:global([data-theme="dark"]) .cta:hover {
+  color: #fff;
 }

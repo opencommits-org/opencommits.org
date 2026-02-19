@@ -1,11 +1,11 @@
 .terminal {
-  background: var(--bg2);
+  background: var(--bg);
   border: 1px solid var(--border);
   border-radius: 12px;
   overflow: hidden;
   max-width: 780px;
   margin: 0 auto;
-  box-shadow: 0 32px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.04);
+  box-shadow: 0 32px 80px var(--shadow-color), 0 0 0 1px var(--border);
   text-align: left;
 }
 
@@ -62,8 +62,8 @@
   margin-bottom: 16px;
 }
 
-.labelBad { color: rgba(255,95,87,0.7); }
-.labelGood { color: rgba(0,229,160,0.8); }
+.labelBad { color: var(--red); }
+.labelGood { color: var(--green-3); }
 
 .line {
   font-family: var(--mono);

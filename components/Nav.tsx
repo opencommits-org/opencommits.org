@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
+import ThemeToggle from './ThemeToggle'
 import styles from './Nav.module.css'
 
 export default function Nav() {
@@ -33,6 +34,7 @@ export default function Nav() {
         >
           {t('github')}
         </a>
+        <ThemeToggle />
       </div>
     </nav>
   )

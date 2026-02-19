@@ -13,8 +13,8 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(0,229,160,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,229,160,0.03) 1px, transparent 1px);
+    linear-gradient(rgba(45,164,78,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(45,164,78,0.08) 1px, transparent 1px);
   background-size: 60px 60px;
   mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 30%, transparent 100%);
   pointer-events: none;
@@ -24,7 +24,7 @@
   position: absolute;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(0,229,160,0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(172,238,187,0.4) 0%, transparent 70%);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -60%);
@@ -45,9 +45,9 @@
   gap: 8px;
   font-family: var(--mono);
   font-size: 12px;
-  color: var(--accent);
-  border: 1px solid rgba(0,229,160,0.25);
-  background: rgba(0,229,160,0.06);
+  color: var(--green-4);
+  border: 1px solid var(--green-2);
+  background: var(--green-1);
   padding: 6px 14px;
   border-radius: 100px;
   margin-bottom: 40px;
@@ -111,39 +111,40 @@
   align-items: center;
   gap: 8px;
   background: var(--accent);
-  color: #000;
+  color: #fff;
   font-family: var(--mono);
   font-size: 14px;
   font-weight: 500;
   padding: 14px 28px;
   border-radius: 6px;
   text-decoration: none;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
 }
 
 .btnPrimary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 32px var(--accent-glow);
+  background: var(--green-4);
+  box-shadow: 0 8px 32px rgba(45,164,78,0.25);
 }
 
 .btnSecondary {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: transparent;
+  background: var(--bg);
   color: var(--text);
   font-family: var(--mono);
   font-size: 14px;
   padding: 14px 28px;
   border-radius: 6px;
   text-decoration: none;
-  border: 1px solid var(--border-bright);
+  border: 1px solid var(--border);
   transition: border-color 0.2s, background 0.2s;
 }
 
 .btnSecondary:hover {
-  border-color: rgba(255,255,255,0.25);
-  background: rgba(255,255,255,0.04);
+  border-color: var(--border-bright);
+  background: var(--bg2);
 }
 
 /* SECTIONS */
@@ -216,9 +217,9 @@
   opacity: 0.5;
 }
 
-.fRequired { color: var(--accent); }
+.fRequired { color: var(--green-4); }
 .fOptional { color: var(--text-muted); }
-.fBang { color: #ff6b6b; }
+.fBang { color: var(--red); }
 .fSep { color: var(--text-dim); }
 
 .formatParts {
@@ -265,7 +266,7 @@
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--text-dim);
-  background: rgba(255,255,255,0.04);
+  background: var(--bg3);
   padding: 2px 6px;
   border-radius: 3px;
   margin-left: 8px;
@@ -295,17 +296,17 @@
   transition: background 0.15s;
 }
 
-.semverTable tr:hover td { background: rgba(255,255,255,0.02); }
+.semverTable tr:hover td { background: var(--bg2); }
 .semverTable tr:last-child td { border-bottom: none; }
 
-.tdType { color: var(--accent); }
+.tdType { color: var(--green-4); }
 .tdRule { font-size: 13px; color: var(--text-muted); }
 
-.svMajor   { background: rgba(255,95,87,0.12);  color: #ff5f57; border: 1px solid rgba(255,95,87,0.2);  padding: 2px 7px; border-radius: 3px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; }
-.svMinor   { background: rgba(254,188,46,0.1);  color: #febc2e; border: 1px solid rgba(254,188,46,0.2); padding: 2px 7px; border-radius: 3px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; }
-.svPatch   { background: rgba(40,200,64,0.1);   color: #28c840; border: 1px solid rgba(40,200,64,0.2);  padding: 2px 7px; border-radius: 3px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; }
-.svInternal{ background: rgba(255,255,255,0.04);color: var(--text-dim); border: 1px solid var(--border); padding: 2px 7px; border-radius: 3px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; }
-.svNone    { background: rgba(255,255,255,0.04);color: var(--text-dim); border: 1px solid var(--border); padding: 2px 7px; border-radius: 3px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; }
+.svMajor   { background: rgba(207,34,46,0.1);  color: var(--red); border: 1px solid rgba(207,34,46,0.3);  padding: 2px 7px; border-radius: 3px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; }
+.svMinor   { background: rgba(154,103,0,0.1);  color: var(--yellow); border: 1px solid rgba(154,103,0,0.3); padding: 2px 7px; border-radius: 3px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; }
+.svPatch   { background: var(--green-1);   color: var(--green-4); border: 1px solid var(--green-2);  padding: 2px 7px; border-radius: 3px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; }
+.svInternal{ background: var(--bg3); color: var(--text-dim); border: 1px solid var(--border); padding: 2px 7px; border-radius: 3px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; }
+.svNone    { background: var(--bg3); color: var(--text-dim); border: 1px solid var(--border); padding: 2px 7px; border-radius: 3px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; }
 
 /* REGEX */
 .regexSection {
@@ -329,7 +330,7 @@
   position: absolute;
   width: 500px;
   height: 300px;
-  background: radial-gradient(ellipse, rgba(0,229,160,0.06) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(172,238,187,0.5) 0%, transparent 70%);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -395,4 +396,33 @@
   font-family: var(--mono);
   font-size: 12px;
   color: var(--text-dim);
+}
+
+/* Dark mode overrides */
+:global([data-theme="dark"]) .heroGrid {
+  background-image:
+    linear-gradient(rgba(63,185,80,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(63,185,80,0.06) 1px, transparent 1px);
+}
+
+:global([data-theme="dark"]) .heroGlow {
+  background: radial-gradient(circle, rgba(63,185,80,0.15) 0%, transparent 70%);
+}
+
+:global([data-theme="dark"]) .ctaGlow {
+  background: radial-gradient(ellipse, rgba(63,185,80,0.1) 0%, transparent 70%);
+}
+
+:global([data-theme="dark"]) .btnPrimary:hover {
+  box-shadow: 0 8px 32px rgba(63,185,80,0.3);
+}
+
+:global([data-theme="dark"]) .svMajor {
+  background: rgba(248,81,73,0.15);
+  border-color: rgba(248,81,73,0.3);
+}
+
+:global([data-theme="dark"]) .svMinor {
+  background: rgba(210,153,34,0.15);
+  border-color: rgba(210,153,34,0.3);
 }

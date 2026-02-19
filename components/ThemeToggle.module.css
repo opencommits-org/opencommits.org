@@ -1,0 +1,19 @@
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-muted);
+  cursor: none;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.toggle:hover {
+  color: var(--text);
+  border-color: var(--border-bright);
+  background: var(--bg2);
+}
