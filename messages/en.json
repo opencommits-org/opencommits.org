@@ -1,0 +1,102 @@
+{
+  "nav": {
+    "format": "Format",
+    "types": "Types",
+    "semver": "SemVer",
+    "spec": "Spec",
+    "github": "GitHub →"
+  },
+  "hero": {
+    "badge": "v1.0 — Stable",
+    "title": "Commit messages",
+    "titleAccent": "done right.",
+    "sub": "A minimal, deterministic commit standard that replaces noise with signal. Built for teams. Designed to last.",
+    "readSpec": "Read the Spec →",
+    "github": "GitHub"
+  },
+  "format": {
+    "label": "The Format",
+    "title": "One structure.",
+    "titleLine2": "Every commit.",
+    "sub": "Three components. No colons, parentheses, or mandatory footers. Just clarity.",
+    "parts": {
+      "type": {
+        "name": "Type",
+        "desc": "A 3-letter capitalized identifier describing the intent. Add, Fix, Ref and more."
+      },
+      "bang": {
+        "name": "!",
+        "desc": "Appended after Type. Signals a breaking change. Maps to SemVer MAJOR regardless of base type."
+      },
+      "scope": {
+        "name": "scope",
+        "desc": "Lowercase domain identifier — where the change lives. ui, api, db, auth."
+      },
+      "description": {
+        "name": "description",
+        "desc": "Lowercase, concise, human-readable. No trailing period. Write for someone scanning git log at speed."
+      }
+    },
+    "required": "required",
+    "optional": "optional"
+  },
+  "types": {
+    "label": "Types",
+    "title": "Every commit",
+    "titleLine2": "has a name.",
+    "sub": "Core Types are mandatory for compliance. Extended Types are officially defined — opt in when your team benefits.",
+    "tabCore": "Core",
+    "tabExtended": "Extended"
+  },
+  "semver": {
+    "label": "SemVer Mapping",
+    "title": "Automation-ready",
+    "titleLine2": "by design.",
+    "sub": "Every commit maps deterministically to a semantic version impact. No context. No guessing. Tooling reads it directly.",
+    "colType": "Type",
+    "colImpact": "SemVer Impact",
+    "colRule": "Rule",
+    "rows": {
+      "breaking": "Breaking change overrides all defaults",
+      "add": "New capability added",
+      "dep": "Signals a future MAJOR",
+      "fix": "Corrective change",
+      "internal": "No version bump unless ! is used",
+      "none": "No version impact"
+    }
+  },
+  "validation": {
+    "label": "Validation",
+    "title": "One regex.",
+    "titleLine2": "CI-ready.",
+    "sub": "The normative pattern for OpenCommits v1.0. Defines the complete grammar of a valid subject line. Drop it into any linter.",
+    "defaultLabel": "Default profile — allows up to two scope tokens",
+    "strictLabel": "Strict profile — single scope only",
+    "copy": "Copy",
+    "copied": "Copied!"
+  },
+  "cta": {
+    "title": "Start using it",
+    "titleAccent": "today.",
+    "sub": "Read the full specification, contribute to the standard, or drop the regex into your CI pipeline right now.",
+    "readSpec": "Read the Spec →",
+    "contribute": "Contribute on GitHub"
+  },
+  "footer": {
+    "license": "OpenCommits v1.0 · Licensed under",
+    "licenseLink": "CC BY 4.0",
+    "domain": "opencommits.com"
+  },
+  "spec": {
+    "back": "← Back",
+    "badge": "Stable — v1.0",
+    "license": "OpenCommits v1.0 · CC BY 4.0",
+    "editGithub": "Edit on GitHub →",
+    "title": "OpenCommits v1.0 Specification",
+    "description": "The complete OpenCommits v1.0 commit message standard specification."
+  },
+  "meta": {
+    "title": "OpenCommits — A Better Commit Standard",
+    "description": "A minimal, deterministic commit message standard. Replaces noise with signal. Built for teams. Designed to last."
+  }
+}
