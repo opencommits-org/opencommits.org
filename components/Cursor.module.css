@@ -1,23 +1,107 @@
-.cursor {
+.cursorLayer {
   position: fixed;
   width: 8px;
   height: 8px;
-  background: var(--accent);
-  border-radius: 50%;
+  border-radius: 2px;
   pointer-events: none;
-  z-index: 9999;
   transform: translate(-50%, -50%);
-  transition: width 0.2s ease, height 0.2s ease;
+  will-change: left, top;
+  transition: opacity 180ms ease, transform 220ms ease, border-radius 220ms ease, background 180ms ease, border-color 180ms ease;
 }
 
-.ring {
-  position: fixed;
-  width: 32px;
-  height: 32px;
-  border: 1px solid var(--green-border);
-  border-radius: 50%;
-  pointer-events: none;
+.interactive {
+  width: 14px;
+  height: 18px;
+  border-radius: 0;
+  background: #0f172a !important;
+  clip-path: polygon(8% 4%, 8% 96%, 33% 71%, 48% 98%, 64% 90%, 48% 64%, 84% 64%);
+}
+
+.interactive.layer0 {
+  transform: translate(-8%, -4%) !important;
+  transition: opacity 180ms ease, background 180ms ease, border-color 180ms ease !important;
+}
+
+[data-theme="dark"] .interactive {
+  background: #ffffff !important;
+}
+
+[data-theme="dark"] .interactive.layer0 {
+  -webkit-filter: none !important;
+  filter: none !important;
+}
+
+.interactive.layer1,
+.interactive.layer2,
+.interactive.layer3,
+.interactive.layer4 {
+  opacity: 0 !important;
+  transition: none !important;
+}
+
+[data-theme="dark"] .interactive.layer1 {
+  opacity: 0.38 !important;
+  background: #000 !important;
+  transform: translate(-8%, -4%) translate(1.2px, 1.2px) !important;
+}
+
+[data-theme="dark"] .interactive.layer2 {
+  opacity: 0.18 !important;
+  background: #000 !important;
+  transform: translate(-8%, -4%) translate(2.4px, 2.4px) scale(1.03) !important;
+}
+
+.layer0 {
+  background: var(--grid-4);
+  z-index: 9999;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.layer1 {
+  background: var(--grid-3);
   z-index: 9998;
-  transform: translate(-50%, -50%);
-  transition: width 0.3s ease, height 0.3s ease;
+  opacity: 0.92;
+  transform: translate(-50%, -50%) scale(0.95);
+}
+
+.layer2 {
+  background: var(--grid-2);
+  z-index: 9997;
+  opacity: 0.84;
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.layer3 {
+  background: var(--grid-1);
+  z-index: 9996;
+  opacity: 0.76;
+  transform: translate(-50%, -50%) scale(0.86);
+}
+
+.layer4 {
+  background: var(--grid-0);
+  z-index: 9995;
+  opacity: 0.68;
+  transform: translate(-50%, -50%) scale(0.82);
+}
+
+[data-theme="dark"] .layer0 {
+  background: var(--grid-4);
+}
+
+[data-theme="dark"] .layer1 {
+  background: var(--grid-3);
+}
+
+[data-theme="dark"] .layer2 {
+  background: var(--grid-2);
+}
+
+[data-theme="dark"] .layer3 {
+  background: var(--grid-1);
+}
+
+[data-theme="dark"] .layer4 {
+  background: var(--grid-0);
 }

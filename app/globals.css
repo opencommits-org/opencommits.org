@@ -82,6 +82,10 @@ body {
   cursor: none;
 }
 
+body * {
+  cursor: none !important;
+}
+
 body::before {
   content: '';
   position: fixed;
