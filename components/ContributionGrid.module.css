@@ -1,0 +1,22 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(50, 16px);
+  grid-template-rows: repeat(50, 16px);
+  gap: 4px;
+  transform: translateY(-100px);
+  opacity: 0.6;
+  mask-image: radial-gradient(circle at 50% 50%, black 0%, transparent 70%);
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, black 0%, transparent 70%);
+}
+
+.square {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  background: var(--green-0);
+}
+
+.square1 { background: var(--green-1); }
+.square2 { background: var(--green-2); }
+.square3 { background: var(--green-3); }
+.square4 { background: var(--green-4); }

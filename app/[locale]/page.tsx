@@ -4,6 +4,7 @@ import Terminal from '@/components/Terminal'
 import TypesGrid from '@/components/TypesGrid'
 import RegexBlock from '@/components/RegexBlock'
 import Reveal from '@/components/Reveal'
+import ContributionGrid from '@/components/ContributionGrid'
 import s from './page.module.css'
 
 export default function Home() {
@@ -14,8 +15,9 @@ export default function Home() {
 
       {/* HERO */}
       <section className={s.hero}>
-        <div className={s.heroGrid} />
-        <div className={s.heroGlow} />
+        <div className={s.heroGrid}>
+          <ContributionGrid />
+        </div>
         <div className={s.heroInner}>
           <div className={s.badge}>
             <span className={s.badgeDot} />

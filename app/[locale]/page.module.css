@@ -12,23 +12,11 @@
 .heroGrid {
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(rgba(45,164,78,0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(45,164,78,0.08) 1px, transparent 1px);
-  background-size: 60px 60px;
-  mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 30%, transparent 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   pointer-events: none;
-}
-
-.heroGlow {
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(172,238,187,0.4) 0%, transparent 70%);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -60%);
-  pointer-events: none;
+  overflow: hidden;
 }
 
 .heroInner {
@@ -84,11 +72,34 @@
 
 .heroSub {
   font-size: 18px;
-  color: var(--text-muted);
+  color: var(--text);
   max-width: 520px;
   margin: 0 auto 56px;
   line-height: 1.7;
-  font-weight: 400;
+  font-weight: 500;
+  text-shadow:
+    0 0 10px var(--bg),
+    0 0 10px var(--bg),
+    0 0 10px var(--bg),
+    0 0 10px var(--bg),
+    0 0 10px var(--bg),
+    0 0 10px var(--bg),
+    0 0 10px var(--bg),
+    0 0 10px var(--bg),
+    0 0 10px var(--bg),
+    0 0 20px var(--bg),
+    0 0 20px var(--bg),
+    0 0 20px var(--bg),
+    0 0 20px var(--bg),
+    0 0 20px var(--bg),
+    0 0 20px var(--bg),
+    0 0 30px var(--bg),
+    0 0 30px var(--bg),
+    0 0 30px var(--bg),
+    0 0 30px var(--bg),
+    0 0 40px var(--bg),
+    0 0 40px var(--bg),
+    0 0 40px var(--bg);
   animation: fadeUp 0.6s 0.2s ease both;
 }
 
@@ -399,30 +410,58 @@
 }
 
 /* Dark mode overrides */
-:global([data-theme="dark"]) .heroGrid {
-  background-image:
-    linear-gradient(rgba(63,185,80,0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(63,185,80,0.06) 1px, transparent 1px);
-}
-
-:global([data-theme="dark"]) .heroGlow {
-  background: radial-gradient(circle, rgba(63,185,80,0.15) 0%, transparent 70%);
-}
-
 :global([data-theme="dark"]) .ctaGlow {
-  background: radial-gradient(ellipse, rgba(63,185,80,0.1) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(0,229,160,0.06) 0%, transparent 70%);
+}
+
+:global([data-theme="dark"]) .btnPrimary {
+  color: #000;
 }
 
 :global([data-theme="dark"]) .btnPrimary:hover {
-  box-shadow: 0 8px 32px rgba(63,185,80,0.3);
+  box-shadow: 0 8px 32px var(--accent-glow);
+}
+
+:global([data-theme="dark"]) .btnSecondary:hover {
+  border-color: rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.04);
 }
 
 :global([data-theme="dark"]) .svMajor {
-  background: rgba(248,81,73,0.15);
-  border-color: rgba(248,81,73,0.3);
+  background: rgba(255,95,87,0.12);
+  color: #ff5f57;
+  border-color: rgba(255,95,87,0.2);
 }
 
 :global([data-theme="dark"]) .svMinor {
-  background: rgba(210,153,34,0.15);
-  border-color: rgba(210,153,34,0.3);
+  background: rgba(254,188,46,0.1);
+  color: #febc2e;
+  border-color: rgba(254,188,46,0.2);
+}
+
+:global([data-theme="dark"]) .svPatch {
+  background: rgba(40,200,64,0.1);
+  color: #28c840;
+  border-color: rgba(40,200,64,0.2);
+}
+
+:global([data-theme="dark"]) .svNone,
+:global([data-theme="dark"]) .svInternal {
+  background: rgba(255,255,255,0.04);
+  color: var(--text-dim);
+  border-color: var(--border);
+}
+
+:global([data-theme="dark"]) .badge {
+  color: var(--accent);
+  border-color: rgba(0,229,160,0.25);
+  background: rgba(0,229,160,0.06);
+}
+
+:global([data-theme="dark"]) .formatPart {
+  background: var(--bg2);
+}
+
+:global([data-theme="dark"]) .tagOptional {
+  background: rgba(255,255,255,0.04);
 }
