@@ -14,12 +14,12 @@ const before = [
 
 type Part = [string, string?]
 const after: Part[][] = [
-  [['Add', 'accent'], [' '], ['ui', 'blue'], [' accordion menu']],
+  [['Add', 'accent'], [' '], ['ui', 'scope'], [' accordion menu']],
   [['Fix', 'accent'], [' login redirect loop']],
-  [['Ref', 'accent'], [' '], ['core', 'blue'], [' session cleanup']],
-  [['Chr', 'accent'], [' '], ['ci', 'blue'], [' update staging pipeline']],
-  [['Fix', 'accent'], [' '], ['a11y', 'blue'], [' missing aria labels']],
-  [['Opt', 'accent'], [' '], ['db', 'blue'], [' transaction batching']],
+  [['Ref', 'accent'], [' '], ['core', 'scope'], [' session cleanup']],
+  [['Chr', 'accent'], [' '], ['ci', 'scope'], [' update staging pipeline']],
+  [['Fix', 'accent'], [' '], ['a11y', 'scope'], [' missing aria labels']],
+  [['Opt', 'accent'], [' '], ['db', 'scope'], [' transaction batching']],
 ]
 
 export default function Terminal() {
@@ -64,7 +64,7 @@ export default function Terminal() {
               {parts.map(([text, color], j) => (
                 <span key={j} className={
                   color === 'accent' ? styles.typeAccent :
-                  color === 'blue' ? styles.typeBlue :
+                  color === 'scope' ? styles.typeScope :
                   styles.typeText
                 }>{text}</span>
               ))}

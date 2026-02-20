@@ -88,5 +88,6 @@
 }
 
 .typeAccent { color: var(--accent); font-weight: 500; }
-.typeBlue { color: var(--blue); }
+.typeScope { color: #8250df; }
+[data-theme="dark"] .typeScope { color: #b99af8; }
 .typeText { color: var(--text); }

@@ -47,7 +47,7 @@ export default function Home() {
             <span className={s.fRequired}>Type</span>
             <span className={s.fBang}>[!]</span>
             <span className={s.fSep}>·</span>
-            <span className={s.fOptional}>[scope]</span>
+            <span className={`${s.fOptional} ${s.fScope}`}>[scope]</span>
             <span className={s.fSep}>·</span>
             <span className={s.fOptional}>description</span>
           </div>
@@ -57,7 +57,7 @@ export default function Home() {
             {[
               { key: 'type', nameClass: s.fRequired, req: true },
               { key: 'bang', nameClass: s.fBang, req: false },
-              { key: 'scope', nameClass: s.fOptional, req: false },
+              { key: 'scope', nameClass: `${s.fOptional} ${s.fScope}`, req: false },
               { key: 'description', nameClass: s.fOptional, req: true },
             ].map(p => (
               <div key={p.key} className={s.formatPart}>

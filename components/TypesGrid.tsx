@@ -17,7 +17,7 @@ const coreTypes = [
 ]
 
 const extendedTypes = [
-  { tag: 'Mov', name: 'Move files or modules', desc: 'Relocation without logic changes.', example: [['Mov','blue'],[' '],['ui','blue'],[' components to shared/ui']], semver: 'none' },
+  { tag: 'Mov', name: 'Move files or modules', desc: 'Relocation without logic changes.', example: [['Mov','blue'],[' '],['ui','scope'],[' components to shared/ui']], semver: 'none' },
   { tag: 'Rnm', name: 'Rename identifiers or files', desc: 'Renaming across the codebase.', example: [['Rnm','blue'],[' user_service to account_service']], semver: 'none' },
   { tag: 'Dep', name: 'Deprecate features or APIs', desc: 'Mark as deprecated but not yet removed. Signals a future Rmv!.', example: [['Dep','blue'],[' v1 user endpoints']], semver: 'minor' },
   { tag: 'Sec', name: 'Security-specific changes', desc: 'Explicitly highlight security work when visibility matters.', example: [['Sec','blue'],[' fix csrf vulnerability in forms']], semver: 'patch' },
@@ -71,7 +71,8 @@ function TypeCard({ type, extended, index }: { type: CardType, extended?: boolea
         {type.example.map(([text, color], i) => (
           <span key={i} className={
             color === 'accent' ? styles.exAccent :
-            color === 'blue' ? styles.exBlue : ''
+            color === 'scope' ? styles.exScope :
+            color === 'blue' ? (extended ? styles.exBlue : styles.exScope) : ''
           }>{text}</span>
         ))}
       </div>

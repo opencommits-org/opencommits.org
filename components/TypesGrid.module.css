@@ -118,4 +118,7 @@
 }
 
 .exAccent { color: var(--green-text); font-weight: 500; }
+.exScope { color: #8250df; font-weight: 500; }
 .exBlue { color: var(--blue); font-weight: 500; }
+
+[data-theme="dark"] .exScope { color: #b99af8; }
