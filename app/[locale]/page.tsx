@@ -142,7 +142,9 @@ export default function Home() {
 
       {/* CTA */}
       <section className={s.cta}>
-        <div className={s.ctaGlow} />
+        <div className={s.ctaGrid}>
+          <ContributionGrid />
+        </div>
         <div className={s.ctaInner}>
           <Reveal>
             <h2 className={s.ctaTitle}>
