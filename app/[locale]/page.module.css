@@ -33,14 +33,14 @@
   gap: 8px;
   font-family: var(--mono);
   font-size: 12px;
-  color: var(--green-text);
+  color: #0f172a;
   border: 1px solid var(--green-border);
-  background: var(--green-bg);
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: saturate(140%) blur(2px);
   padding: 6px 14px;
   border-radius: 100px;
   margin-bottom: 40px;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
   animation: fadeUp 0.6s ease both;
 }
 
@@ -50,7 +50,19 @@
   background: var(--accent);
   border-radius: 50%;
   display: inline-block;
-  animation: pulse 2s ease infinite;
+  transform-origin: center;
+  animation: badgePulse 2s ease infinite;
+}
+
+@keyframes badgePulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
 }
 
 .heroTitle {
@@ -63,11 +75,52 @@
 }
 
 .heroTitleGradient {
-  display: block;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--blue) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+  --marker-rgb: 240, 225, 74;
+  color: var(--accent);
+  text-shadow: 0 1px 1px #0e1319;
+}
+
+[data-theme="dark"] .heroTitleGradient {
+  --marker-rgb: 130, 80, 223;
+}
+
+.heroTitleGradient::before,
+.heroTitleGradient::after {
+  content: '';
+  position: absolute;
+  height: 0.4em;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(var(--marker-rgb), 0) 0%,
+      rgba(var(--marker-rgb), 0.7) 8%,
+      rgba(var(--marker-rgb), 0.7) 92%,
+      rgba(var(--marker-rgb), 0) 100%
+    );
+  border-radius: 0;
+  transform-origin: center;
+  opacity: 0.76;
+}
+
+.heroTitleGradient::before {
+  left: -0.26em;
+  right: -0.44em;
+  bottom: 0.11em;
+  z-index: -2;
+  transform: rotate(-1.6deg) skewX(-9deg);
+  opacity: 0.62;
+  filter: blur(0.5px);
+}
+
+.heroTitleGradient::after {
+  left: -0.41em;
+  right: -0.22em;
+  bottom: 0.02em;
+  z-index: -1;
+  transform: rotate(-2.3deg) skewX(-11deg);
 }
 
 .heroSub {
