@@ -7,21 +7,29 @@
   --bg3: #eff2f5;
   --border: #d0d7de;
   --border-bright: #afb8c1;
-  --accent: #2da44e;
-  --accent-dim: rgba(45,164,78,0.1);
-  --accent-glow: rgba(45,164,78,0.2);
+  --accent: #00b386;
+  --accent-dim: rgba(0,179,134,0.12);
+  --accent-glow: rgba(0,179,134,0.25);
+  --accent-underline: rgba(0,179,134,0.4);
   --text: #1f2328;
   --text-muted: #656d76;
   --text-dim: #8c959f;
   --red: #cf222e;
+  --red-bg: rgba(207,34,46,0.1);
+  --red-border: rgba(207,34,46,0.3);
   --yellow: #9a6700;
-  --green: #1a7f37;
+  --yellow-bg: rgba(154,103,0,0.1);
+  --yellow-border: rgba(154,103,0,0.3);
+  --green: #00b386;
   --blue: #0969da;
-  --green-0: #eff2f5;
-  --green-1: #aceebb;
-  --green-2: #4ac26b;
-  --green-3: #2da44e;
-  --green-4: #116329;
+  --green-bg: rgba(0,179,134,0.12);
+  --green-border: rgba(0,179,134,0.3);
+  --green-text: #00b386;
+  --grid-0: #ebedf0;
+  --grid-1: #9be9a8;
+  --grid-2: #40c463;
+  --grid-3: #00b386;
+  --grid-4: #008866;
   --shadow-color: rgba(0,0,0,0.08);
   --nav-bg: rgba(255,255,255,0.9);
   --cursor-blend: multiply;
@@ -35,21 +43,29 @@
   --bg3: #21262d;
   --border: #30363d;
   --border-bright: #484f58;
-  --accent: #3fb950;
-  --accent-dim: rgba(63,185,80,0.15);
-  --accent-glow: rgba(63,185,80,0.25);
+  --accent: #00e57f;
+  --accent-dim: rgba(0,229,127,0.12);
+  --accent-glow: rgba(0,229,127,0.25);
+  --accent-underline: rgba(0,229,127,0.4);
   --text: #e6edf3;
   --text-muted: #7d8590;
   --text-dim: #484f58;
   --red: #f85149;
+  --red-bg: rgba(248,81,73,0.12);
+  --red-border: rgba(248,81,73,0.25);
   --yellow: #d29922;
-  --green: #3fb950;
+  --yellow-bg: rgba(210,153,34,0.12);
+  --yellow-border: rgba(210,153,34,0.25);
+  --green: #00e57f;
   --blue: #58a6ff;
-  --green-0: #21262d;
-  --green-1: #0e4429;
-  --green-2: #006d32;
-  --green-3: #26a641;
-  --green-4: #3fb950;
+  --green-bg: rgba(0,229,127,0.12);
+  --green-border: rgba(0,229,127,0.25);
+  --green-text: #00e57f;
+  --grid-0: #161b22;
+  --grid-1: #064d2d;
+  --grid-2: #0a7a42;
+  --grid-3: #00b35f;
+  --grid-4: #00e57f;
   --shadow-color: rgba(0,0,0,0.4);
   --nav-bg: rgba(13,17,23,0.9);
   --cursor-blend: screen;
@@ -99,9 +115,9 @@ body::before {
 .spec-content h2 { font-size: 1.6rem; font-weight: 700; letter-spacing: -0.03em; margin-top: 3rem; margin-bottom: 1rem; color: var(--text); border-top: 1px solid var(--border); padding-top: 2rem; }
 .spec-content h3 { font-size: 1.15rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; color: var(--accent); }
 .spec-content p { color: var(--text-muted); line-height: 1.75; margin-bottom: 1rem; font-size: 15px; }
-.spec-content a { color: var(--accent); text-decoration: underline; text-decoration-color: rgba(45,164,78,0.4); }
+.spec-content a { color: var(--accent); text-decoration: underline; text-decoration-color: var(--accent-underline); }
 .spec-content a:hover { text-decoration-color: var(--accent); }
-.spec-content code { font-family: var(--mono); font-size: 13px; background: var(--bg2); border: 1px solid var(--border); padding: 2px 6px; border-radius: 4px; color: var(--green-4); }
+.spec-content code { font-family: var(--mono); font-size: 13px; background: var(--bg2); border: 1px solid var(--border); padding: 2px 6px; border-radius: 4px; color: var(--green-text); }
 .spec-content pre { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; overflow-x: auto; margin: 1.5rem 0; }
 .spec-content pre code { background: none; border: none; padding: 0; color: var(--text-muted); font-size: 13px; line-height: 1.8; }
 .spec-content ul, .spec-content ol { color: var(--text-muted); padding-left: 1.5rem; margin-bottom: 1rem; }
@@ -114,4 +130,3 @@ body::before {
 .spec-content hr { border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; }
 .spec-content strong { color: var(--text); font-weight: 600; }
 
-[data-theme="dark"] .spec-content a { text-decoration-color: rgba(63,185,80,0.4); }

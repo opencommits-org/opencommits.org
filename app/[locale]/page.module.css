@@ -33,9 +33,9 @@
   gap: 8px;
   font-family: var(--mono);
   font-size: 12px;
-  color: var(--green-4);
-  border: 1px solid var(--green-2);
-  background: var(--green-1);
+  color: var(--green-text);
+  border: 1px solid var(--green-border);
+  background: var(--green-bg);
   padding: 6px 14px;
   border-radius: 100px;
   margin-bottom: 40px;
@@ -134,8 +134,8 @@
 
 .btnPrimary:hover {
   transform: translateY(-2px);
-  background: var(--green-4);
-  box-shadow: 0 8px 32px rgba(45,164,78,0.25);
+  background: var(--green-text);
+  box-shadow: 0 8px 32px var(--accent-glow);
 }
 
 .btnSecondary {
@@ -228,7 +228,7 @@
   opacity: 0.5;
 }
 
-.fRequired { color: var(--green-4); }
+.fRequired { color: var(--green-text); }
 .fOptional { color: var(--text-muted); }
 .fBang { color: var(--red); }
 .fSep { color: var(--text-dim); }
@@ -310,12 +310,12 @@
 .semverTable tr:hover td { background: var(--bg2); }
 .semverTable tr:last-child td { border-bottom: none; }
 
-.tdType { color: var(--green-4); }
+.tdType { color: var(--green-text); }
 .tdRule { font-size: 13px; color: var(--text-muted); }
 
-.svMajor   { background: rgba(207,34,46,0.1);  color: var(--red); border: 1px solid rgba(207,34,46,0.3);  padding: 2px 7px; border-radius: 3px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; }
-.svMinor   { background: rgba(154,103,0,0.1);  color: var(--yellow); border: 1px solid rgba(154,103,0,0.3); padding: 2px 7px; border-radius: 3px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; }
-.svPatch   { background: var(--green-1);   color: var(--green-4); border: 1px solid var(--green-2);  padding: 2px 7px; border-radius: 3px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; }
+.svMajor   { background: var(--red-bg);  color: var(--red); border: 1px solid var(--red-border);  padding: 2px 7px; border-radius: 3px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; }
+.svMinor   { background: var(--yellow-bg);  color: var(--yellow); border: 1px solid var(--yellow-border); padding: 2px 7px; border-radius: 3px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; }
+.svPatch   { background: var(--green-bg);   color: var(--green-text); border: 1px solid var(--green-border);  padding: 2px 7px; border-radius: 3px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; }
 .svInternal{ background: var(--bg3); color: var(--text-dim); border: 1px solid var(--border); padding: 2px 7px; border-radius: 3px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; }
 .svNone    { background: var(--bg3); color: var(--text-dim); border: 1px solid var(--border); padding: 2px 7px; border-radius: 3px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; }
 
@@ -410,58 +410,6 @@
 }
 
 /* Dark mode overrides */
-:global([data-theme="dark"]) .ctaGlow {
-  background: radial-gradient(ellipse, rgba(0,229,160,0.06) 0%, transparent 70%);
-}
-
 :global([data-theme="dark"]) .btnPrimary {
   color: #000;
-}
-
-:global([data-theme="dark"]) .btnPrimary:hover {
-  box-shadow: 0 8px 32px var(--accent-glow);
-}
-
-:global([data-theme="dark"]) .btnSecondary:hover {
-  border-color: rgba(255,255,255,0.25);
-  background: rgba(255,255,255,0.04);
-}
-
-:global([data-theme="dark"]) .svMajor {
-  background: rgba(255,95,87,0.12);
-  color: #ff5f57;
-  border-color: rgba(255,95,87,0.2);
-}
-
-:global([data-theme="dark"]) .svMinor {
-  background: rgba(254,188,46,0.1);
-  color: #febc2e;
-  border-color: rgba(254,188,46,0.2);
-}
-
-:global([data-theme="dark"]) .svPatch {
-  background: rgba(40,200,64,0.1);
-  color: #28c840;
-  border-color: rgba(40,200,64,0.2);
-}
-
-:global([data-theme="dark"]) .svNone,
-:global([data-theme="dark"]) .svInternal {
-  background: rgba(255,255,255,0.04);
-  color: var(--text-dim);
-  border-color: var(--border);
-}
-
-:global([data-theme="dark"]) .badge {
-  color: var(--accent);
-  border-color: rgba(0,229,160,0.25);
-  background: rgba(0,229,160,0.06);
-}
-
-:global([data-theme="dark"]) .formatPart {
-  background: var(--bg2);
-}
-
-:global([data-theme="dark"]) .tagOptional {
-  background: rgba(255,255,255,0.04);
 }

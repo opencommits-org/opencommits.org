@@ -63,7 +63,7 @@
 }
 
 .labelBad { color: var(--red); }
-.labelGood { color: var(--green-3); }
+.labelGood { color: var(--accent); }
 
 .line {
   font-family: var(--mono);

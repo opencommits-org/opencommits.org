@@ -13,10 +13,10 @@
   width: 16px;
   height: 16px;
   border-radius: 3px;
-  background: var(--green-0);
+  background: var(--grid-0);
 }
 
-.square1 { background: var(--green-1); }
-.square2 { background: var(--green-2); }
-.square3 { background: var(--green-3); }
-.square4 { background: var(--green-4); }
+.square1 { background: var(--grid-1); }
+.square2 { background: var(--grid-2); }
+.square3 { background: var(--grid-3); }
+.square4 { background: var(--grid-4); }

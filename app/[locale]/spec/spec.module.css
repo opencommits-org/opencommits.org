@@ -29,9 +29,9 @@
   gap: 8px;
   font-family: var(--mono);
   font-size: 11px;
-  color: var(--green-4);
-  border: 1px solid var(--green-2);
-  background: var(--green-1);
+  color: var(--green-text);
+  border: 1px solid var(--green-border);
+  background: var(--green-bg);
   padding: 5px 12px;
   border-radius: 100px;
   margin-bottom: 40px;
