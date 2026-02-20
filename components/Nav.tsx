@@ -19,7 +19,13 @@ export default function Nav() {
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.navScrolled : ''}`}>
       <Link href="/" className={styles.logo}>
-        open<span className={styles.logoAccent}>commits</span>
+        <span>
+          open<span className={styles.logoAccent}>commits</span>
+        </span>
+        <span className={styles.badge}>
+          {t('version')}
+          <span className={styles.badgeDot} />
+        </span>
       </Link>
       <div className={styles.links}>
         <a href="#format" className={styles.link}>{t('format')}</a>

@@ -19,6 +19,9 @@
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-family: var(--mono);
   font-size: 14px;
   font-weight: 500;
@@ -29,6 +32,44 @@
 
 .logoAccent {
   color: var(--accent);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #0f172a;
+  border: 1px solid #c1c1c14d;
+  background: transparent;
+  padding: 3px 8px;
+  border-radius: 0;
+  letter-spacing: 0.06em;
+}
+
+[data-theme="dark"] .badge {
+  color: #c1c1c1;
+  border-color: #c1c1c136;
+}
+
+.badgeDot {
+  width: 5px;
+  height: 5px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: inline-block;
+  animation: badgePulse 2s ease infinite;
+}
+
+@keyframes badgePulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
 }
 
 .links {

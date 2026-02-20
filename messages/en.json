@@ -4,10 +4,11 @@
     "types": "Types",
     "semver": "SemVer",
     "spec": "Spec",
-    "github": "GitHub →"
+    "github": "GitHub →",
+    "version": "v1.0.0"
   },
   "hero": {
-    "badge": "v1.0 — Stable",
+    "badge": "v1.0.0",
     "title": "Commit messages",
     "titleAccent": "done right.",
     "sub": "A minimal, deterministic commit standard that replaces noise with signal. Built for teams. Designed to last.",
@@ -69,7 +70,7 @@
     "label": "Validation",
     "title": "One regex.",
     "titleLine2": "CI-ready.",
-    "sub": "The normative pattern for OpenCommits v1.0. Defines the complete grammar of a valid subject line. Drop it into any linter.",
+    "sub": "The normative pattern for OpenCommits v1.0.0. Defines the complete grammar of a valid subject line. Drop it into any linter.",
     "defaultLabel": "Default profile — allows up to two scope tokens",
     "strictLabel": "Strict profile — single scope only",
     "copy": "Copy",
@@ -83,17 +84,17 @@
     "contribute": "Contribute on GitHub"
   },
   "footer": {
-    "license": "OpenCommits v1.0 · Licensed under",
+    "license": "OpenCommits v1.0.0 · Licensed under",
     "licenseLink": "CC BY 4.0",
     "domain": "opencommits.com"
   },
   "spec": {
     "back": "← Back",
-    "badge": "Stable — v1.0",
-    "license": "OpenCommits v1.0 · CC BY 4.0",
+    "badge": "Stable — v1.0.0",
+    "license": "OpenCommits v1.0.0 · CC BY 4.0",
     "editGithub": "Edit on GitHub →",
-    "title": "OpenCommits v1.0 Specification",
-    "description": "The complete OpenCommits v1.0 commit message standard specification."
+    "title": "OpenCommits v1.0.0 Specification",
+    "description": "The complete OpenCommits v1.0.0 commit message standard specification."
   },
   "meta": {
     "title": "OpenCommits — A Better Commit Standard",

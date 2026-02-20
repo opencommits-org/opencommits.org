@@ -19,10 +19,6 @@ export default function Home() {
           <ContributionGrid />
         </div>
         <div className={s.heroInner}>
-          <div className={s.badge}>
-            <span className={s.badgeDot} />
-            {t('hero.badge')}
-          </div>
           <h1 className={s.heroTitle}>
             {t('hero.title')}<br />
             <span className={s.heroTitleGradient}>{t('hero.titleAccent')}</span>
