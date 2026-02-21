@@ -9,8 +9,8 @@
   },
   "hero": {
     "badge": "v1.0.0",
-    "title": "Commit messages,",
-    "titleAccent": "done right.",
+    "title": "Commit messages",
+    "titleAccent": "simplified.",
     "sub": "A minimal, deterministic commit standard that replaces noise with signal. Built for teams. Designed to last.",
     "readSpec": "Read the Spec →",
     "github": "GitHub"
