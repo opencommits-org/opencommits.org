@@ -115,6 +115,11 @@
   border: 1px solid var(--border);
   padding: 6px 10px;
   border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.card:hover .typeExample {
+  background: var(--bg);
 }
 
 .exAccent { color: var(--green-text); font-weight: 500; }
