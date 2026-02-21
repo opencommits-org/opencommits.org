@@ -1,5 +1,4 @@
 import { useTranslations } from 'next-intl'
-import Link from 'next/link'
 import Terminal from '@/components/Terminal'
 import TypesGrid from '@/components/TypesGrid'
 import RegexBlock from '@/components/RegexBlock'
@@ -25,7 +24,7 @@ export default function Home() {
           </h1>
           <p className={s.heroSub}>{t('hero.sub')}</p>
           <div className={s.heroActions}>
-            <Link href="/spec" className={s.btnPrimary}>{t('hero.readSpec')}</Link>
+            <a href="https://github.com/opencommits-org/opencommits/blob/main/opencommits.md" target="_blank" rel="noopener noreferrer" className={s.btnPrimary}>{t('hero.readSpec')}</a>
             <a href="https://github.com/opencommits-org" target="_blank" rel="noopener noreferrer" className={s.btnSecondary}>
               <GithubIcon /> {t('hero.github')}
             </a>
@@ -156,7 +155,7 @@ export default function Home() {
           </Reveal>
           <Reveal delay={200}>
             <div className={s.ctaActions}>
-              <Link href="/spec" className={s.btnPrimary}>{t('cta.readSpec')}</Link>
+              <a href="https://github.com/opencommits-org/opencommits/blob/main/opencommits.md" target="_blank" rel="noopener noreferrer" className={s.btnPrimary}>{t('cta.readSpec')}</a>
               <a href="https://github.com/opencommits-org" target="_blank" rel="noopener noreferrer" className={s.btnSecondary}>
                 {t('cta.contribute')}
               </a>
@@ -170,7 +169,7 @@ export default function Home() {
         <div className={s.footerLeft}>
           {t('footer.license')} <a href="https://creativecommons.org/licenses/by/4.0/">{t('footer.licenseLink')}</a>
         </div>
-        <div className={s.footerRight}>{t('footer.domain')}</div>
+        <a href="/" className={s.footerRight}>{t('footer.domain')}</a>
       </footer>
     </main>
   )

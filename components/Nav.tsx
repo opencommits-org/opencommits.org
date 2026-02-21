@@ -19,8 +19,13 @@ export default function Nav() {
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.navScrolled : ''}`}>
       <Link href="/" className={styles.logo}>
-        <span>
-          open<span className={styles.logoAccent}>commits</span>
+        <span className={styles.logoText}>
+          {'open'.split('').map((ch, i) => (
+            <span key={i} className={styles.logoLetter} style={{ animationDelay: `${i * 40}ms` }}>{ch}</span>
+          ))}
+          {'commits'.split('').map((ch, i) => (
+            <span key={i + 4} className={`${styles.logoLetter} ${styles.logoAccent}`} style={{ animationDelay: `${(i + 4) * 40}ms` }}>{ch}</span>
+          ))}
         </span>
         <span className={styles.badge}>
           {t('version')}
@@ -33,7 +38,7 @@ export default function Nav() {
         <a href="#semver" className={styles.link}>{t('semver')}</a>
         <Link href="/spec" className={styles.link}>{t('spec')}</Link>
         <a
-          href="https://github.com/opencommits-org"
+          href="https://github.com/opencommits-org/opencommits"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.ghBtn}
