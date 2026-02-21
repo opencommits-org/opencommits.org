@@ -50,7 +50,15 @@ export default function Nav() {
         <a href="#format" className={styles.link} onClick={() => setMenuOpen(false)}>{t('format')}</a>
         <a href="#types" className={styles.link} onClick={() => setMenuOpen(false)}>{t('types')}</a>
         <a href="#semver" className={styles.link} onClick={() => setMenuOpen(false)}>{t('semver')}</a>
-        <Link href="/spec" className={styles.link} onClick={() => setMenuOpen(false)}>{t('spec')}</Link>
+        <a
+          href="https://github.com/opencommits-org/opencommits/blob/main/opencommits.md"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.link}
+          onClick={() => setMenuOpen(false)}
+        >
+          {t('spec')}
+        </a>
         <a
           href="https://github.com/opencommits-org/opencommits"
           target="_blank"
