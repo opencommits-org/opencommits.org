@@ -30,6 +30,25 @@
   letter-spacing: -0.02em;
 }
 
+.logoText {
+  display: inline-flex;
+}
+
+.logoLetter {
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.logo:hover .logoLetter {
+  animation: logoWave 0.4s ease forwards;
+}
+
+@keyframes logoWave {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+  100% { transform: translateY(0); }
+}
+
 .logoAccent {
   color: var(--accent);
 }
