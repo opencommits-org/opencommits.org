@@ -10,11 +10,23 @@
   border-radius: 6px;
   color: var(--text-muted);
   cursor: none;
-  transition: color 0.2s;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
 }
 
 .toggle:hover {
   color: var(--text);
+}
+
+@media (max-width: 868px) {
+  .toggle {
+    border: 1px solid var(--border);
+    background: var(--bg);
+  }
+
+  .toggle:hover {
+    border-color: var(--border-bright);
+    background: var(--bg2);
+  }
 }
 
 .icon {

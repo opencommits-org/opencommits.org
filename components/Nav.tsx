@@ -8,6 +8,7 @@ import styles from './Nav.module.css'
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
   const t = useTranslations('nav')
 
   useEffect(() => {
@@ -17,7 +18,7 @@ export default function Nav() {
   }, [])
 
   return (
-    <nav className={`${styles.nav} ${scrolled ? styles.navScrolled : ''}`}>
+    <nav className={`${styles.nav} ${scrolled || menuOpen ? styles.navScrolled : ''}`}>
       <Link href="/" className={styles.logo}>
         <span className={styles.logoText}>
           {'open'.split('').map((ch, i) => (
@@ -32,11 +33,24 @@ export default function Nav() {
           <span className={styles.badgeDot} />
         </span>
       </Link>
-      <div className={styles.links}>
-        <a href="#format" className={styles.link}>{t('format')}</a>
-        <a href="#types" className={styles.link}>{t('types')}</a>
-        <a href="#semver" className={styles.link}>{t('semver')}</a>
-        <Link href="/spec" className={styles.link}>{t('spec')}</Link>
+      <div className={styles.controls}>
+        <span className={styles.mobileOnly}><ThemeToggle /></span>
+        <button
+          className={`${styles.burger} ${menuOpen ? styles.burgerOpen : ''}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+          aria-expanded={menuOpen}
+        >
+          <span className={styles.burgerLine} />
+          <span className={styles.burgerLine} />
+          <span className={styles.burgerLine} />
+        </button>
+      </div>
+      <div className={`${styles.links} ${menuOpen ? styles.menuOpen : ''}`}>
+        <a href="#format" className={styles.link} onClick={() => setMenuOpen(false)}>{t('format')}</a>
+        <a href="#types" className={styles.link} onClick={() => setMenuOpen(false)}>{t('types')}</a>
+        <a href="#semver" className={styles.link} onClick={() => setMenuOpen(false)}>{t('semver')}</a>
+        <Link href="/spec" className={styles.link} onClick={() => setMenuOpen(false)}>{t('spec')}</Link>
         <a
           href="https://github.com/opencommits-org/opencommits"
           target="_blank"
@@ -50,7 +64,7 @@ export default function Nav() {
             <path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.4 8.166L12 19.748l-7.334 3.415 1.4-8.166L.132 9.21l8.2-1.192z"/>
           </svg>
         </a>
-        <ThemeToggle />
+        <span className={styles.desktopOnly}><ThemeToggle /></span>
       </div>
     </nav>
   )
