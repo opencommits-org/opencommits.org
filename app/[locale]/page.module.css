@@ -137,22 +137,13 @@
     0 0 10px var(--bg),
     0 0 10px var(--bg),
     0 0 10px var(--bg),
-    0 0 10px var(--bg),
-    0 0 10px var(--bg),
-    0 0 10px var(--bg),
-    0 0 20px var(--bg),
-    0 0 20px var(--bg),
     0 0 20px var(--bg),
     0 0 20px var(--bg),
     0 0 20px var(--bg),
     0 0 20px var(--bg),
     0 0 30px var(--bg),
     0 0 30px var(--bg),
-    0 0 30px var(--bg),
-    0 0 30px var(--bg),
-    0 0 40px var(--bg),
-    0 0 40px var(--bg),
-    0 0 40px var(--bg);
+    0 0 30px var(--bg);
   animation: fadeUp 0.6s 0.2s ease both;
 }
 
@@ -440,10 +431,26 @@
 }
 
 .ctaSub {
-  font-size: 17px;
-  color: var(--text-muted);
-  margin-bottom: 48px;
-  line-height: 1.6;
+  font-size: 18px;
+  color: var(--text);
+  max-width: 520px;
+  margin: 0 auto 48px;
+  line-height: 1.7;
+  font-weight: 500;
+  text-shadow:
+    0 0 10px var(--bg),
+    0 0 10px var(--bg),
+    0 0 10px var(--bg),
+    0 0 10px var(--bg),
+    0 0 10px var(--bg),
+    0 0 10px var(--bg),
+    0 0 20px var(--bg),
+    0 0 20px var(--bg),
+    0 0 20px var(--bg),
+    0 0 20px var(--bg),
+    0 0 30px var(--bg),
+    0 0 30px var(--bg),
+    0 0 30px var(--bg);
 }
 
 .ctaActions {
