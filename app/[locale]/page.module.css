@@ -203,12 +203,14 @@
   border-radius: 6px;
   text-decoration: none;
   border: 1px solid var(--border);
-  transition: border-color 0.2s, background 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s, background 0.2s;
 }
 
 .btnSecondary:hover {
+  transform: translateY(-2px);
   border-color: var(--border-bright);
   background: var(--bg2);
+  box-shadow: 0 8px 32px var(--accent-glow);
 }
 
 /* SECTIONS */
@@ -484,4 +486,8 @@
 /* Dark mode overrides */
 :global([data-theme="dark"]) .btnPrimary {
   color: #000;
+}
+
+:global([data-theme="dark"]) .btnSecondary {
+  border-color: #30363d80;
 }
