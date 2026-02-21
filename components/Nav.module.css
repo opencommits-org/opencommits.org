@@ -90,20 +90,42 @@
   color: var(--text);
 }
 
-.cta {
-  font-family: var(--mono);
-  font-size: 13px;
-  color: var(--green-text);
-  border: 1px solid var(--green-border);
-  background: var(--green-bg);
-  padding: 8px 16px;
-  border-radius: 4px;
+.ghBtn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
   text-decoration: none;
-  transition: background 0.2s, border-color 0.2s;
+  transition: color 0.2s;
 }
 
-.cta:hover {
-  background: var(--green-border);
-  border-color: var(--accent);
-  color: var(--green-text);
+.ghIcon,
+.ghStar {
+  position: absolute;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.ghStar {
+  opacity: 0;
+  transform: scale(0.6);
+  color: #e3b341;
+}
+
+.ghBtn:hover {
+  color: var(--text);
+}
+
+.ghBtn:hover .ghIcon {
+  opacity: 0;
+  transform: scale(0.6);
+}
+
+.ghBtn:hover .ghStar {
+  opacity: 1;
+  transform: scale(1);
 }
