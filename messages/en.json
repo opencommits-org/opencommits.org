@@ -97,7 +97,7 @@
     "description": "The complete OpenCommits v1.0.0 commit message standard specification."
   },
   "meta": {
-    "title": "OpenCommits — A Better Commit Standard",
-    "description": "A minimal, deterministic commit message standard. Replaces noise with signal. Built for teams. Designed to last."
+    "title": "Git Commit Messages Standard | OpenCommits",
+    "description": "OpenCommits is a git commit standard for clean, deterministic commit messages with built-in SemVer mapping and CI-ready validation."
   }
 }

@@ -1,21 +1,46 @@
+import type { Metadata } from 'next'
 import { readFileSync, existsSync } from 'fs'
 import { join } from 'path'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
+import { routing } from '@/i18n/routing'
 import s from './spec.module.css'
 
 type Props = {
   params: Promise<{ locale: string }>
 }
 
-export async function generateMetadata({ params }: Props) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'spec' })
+  const localePrefix = locale === routing.defaultLocale ? '' : `/${locale}`
+  const pagePath = `${localePrefix}/spec` || '/spec'
+
   return {
     title: t('title'),
     description: t('description'),
+    alternates: {
+      canonical: pagePath,
+      languages: {
+        en: '/spec',
+        de: '/de/spec',
+        fr: '/fr/spec',
+        es: '/es/spec',
+        'x-default': '/spec',
+      },
+    },
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+      url: pagePath,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('title'),
+      description: t('description'),
+    },
   }
 }
 

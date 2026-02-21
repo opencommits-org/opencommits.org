@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: t('title'),
       description: t('description'),
-      url: 'https://opencommits.com',
+      url: locale === routing.defaultLocale ? 'https://opencommits.org/' : `https://opencommits.org/${locale}`,
       siteName: 'OpenCommits',
       type: 'website',
     },

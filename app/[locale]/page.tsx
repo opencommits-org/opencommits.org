@@ -1,16 +1,65 @@
 import { useTranslations } from 'next-intl'
+import type { Metadata } from 'next'
+import { getTranslations } from 'next-intl/server'
 import Terminal from '@/components/Terminal'
 import TypesGrid from '@/components/TypesGrid'
 import RegexBlock from '@/components/RegexBlock'
 import Reveal from '@/components/Reveal'
 import ContributionGrid from '@/components/ContributionGrid'
+import { routing } from '@/i18n/routing'
 import s from './page.module.css'
+
+type Props = {
+  params: Promise<{ locale: string }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'meta' })
+  const localePrefix = locale === routing.defaultLocale ? '' : `/${locale}`
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    alternates: {
+      canonical: localePrefix || '/',
+      languages: {
+        en: '/',
+        de: '/de',
+        fr: '/fr',
+        es: '/es',
+        'x-default': '/',
+      },
+    },
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+      url: localePrefix || '/',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('title'),
+      description: t('description'),
+    },
+  }
+}
 
 export default function Home() {
   const t = useTranslations()
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'OpenCommits',
+    url: 'https://opencommits.org',
+    inLanguage: ['en', 'de', 'fr', 'es'],
+    description: t('meta.description'),
+    about: 'Git commit standard',
+    sameAs: ['https://github.com/opencommits-org/opencommits'],
+  }
 
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       {/* HERO */}
       <section className={s.hero}>
