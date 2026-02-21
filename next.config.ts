@@ -1,15 +1,18 @@
 import type { NextConfig } from 'next'
-import createNextIntlPlugin from 'next-intl/plugin'
-
-const withNextIntl = createNextIntlPlugin()
+import path from 'node:path'
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  webpack: (config) => {
+    config.resolve.alias['next-intl/config'] = path.resolve(__dirname, './i18n/request.ts')
+    return config
+  },
   turbopack: {
+    root: __dirname,
     resolveAlias: {
       'next-intl/config': './i18n/request.ts',
     },
   },
 }
 
-export default withNextIntl(nextConfig)
+export default nextConfig
