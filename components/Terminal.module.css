@@ -23,9 +23,9 @@
   border-radius: 50%;
 }
 
-.dotRed { background: var(--red); }
-.dotYellow { background: var(--yellow); }
-.dotGreen { background: var(--green); }
+.dotRed { background: #FF5F57; }
+.dotYellow { background: #FEBC2E; }
+.dotGreen { background: #28C840; }
 
 .barTitle {
   font-family: var(--mono);
@@ -91,3 +91,21 @@
 .typeScope { color: #8250df; }
 [data-theme="dark"] .typeScope { color: #b99af8; }
 .typeText { color: var(--text); }
+
+@media (max-width: 868px) {
+  .body {
+    grid-template-columns: 1fr;
+  }
+
+  .colBefore {
+    border-right: none;
+    padding: 0;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .colAfter {
+    padding: 0;
+    padding-top: 16px;
+  }
+}
