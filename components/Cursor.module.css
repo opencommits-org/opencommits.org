@@ -9,46 +9,8 @@
   transition: opacity 180ms ease, transform 220ms ease, border-radius 220ms ease, background 180ms ease, border-color 180ms ease;
 }
 
-.interactive {
-  width: 14px;
-  height: 18px;
-  border-radius: 0;
-  background: #0f172a !important;
-  clip-path: polygon(8% 4%, 8% 96%, 33% 71%, 48% 98%, 64% 90%, 48% 64%, 84% 64%);
-}
-
-.interactive.layer0 {
-  transform: translate(-8%, -4%) !important;
-  transition: opacity 180ms ease, background 180ms ease, border-color 180ms ease !important;
-}
-
-[data-theme="dark"] .interactive {
-  background: #ffffff !important;
-}
-
-[data-theme="dark"] .interactive.layer0 {
-  -webkit-filter: none !important;
-  filter: none !important;
-}
-
-.interactive.layer1,
-.interactive.layer2,
-.interactive.layer3,
-.interactive.layer4 {
+.hidden {
   opacity: 0 !important;
-  transition: none !important;
-}
-
-[data-theme="dark"] .interactive.layer1 {
-  opacity: 0.38 !important;
-  background: #000 !important;
-  transform: translate(-8%, -4%) translate(1.2px, 1.2px) !important;
-}
-
-[data-theme="dark"] .interactive.layer2 {
-  opacity: 0.18 !important;
-  background: #000 !important;
-  transform: translate(-8%, -4%) translate(2.4px, 2.4px) scale(1.03) !important;
 }
 
 .layer0 {

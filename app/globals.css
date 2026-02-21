@@ -82,8 +82,9 @@ body {
   cursor: none;
 }
 
-body * {
-  cursor: none !important;
+body a, body button, body input, body select, body textarea,
+body summary, body label[for], body [role="button"], body [data-clickable="true"] {
+  cursor: pointer !important;
 }
 
 body::before {
